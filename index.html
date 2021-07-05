@@ -4,28 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Context Menu</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
 
 
-    
-    
-    <div class="the-context-menu" oncontextmenu="showContextMenu(event)" >
 
-        <h2><mark> Article</mark>: Introduction to React.js Ref</h2>
-        
-        <menu class="contextmenu" style="display: none;">
-            <a href="#">Edit</a>
-            <a href="#">Order</a>
-        </menu>
-        
+
+<div class="card card-inverse-info" id="context-menu-simple">
+    <div class="card-body">
+        <p class="card-text"> EEE</p>
     </div>
+</div>
 
 
-    <script src="script.js"></script>
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.6.4/jquery.contextMenu.min.js"></script>
+
+<script>
+    (function($) {
+        'use strict';
+        $.contextMenu({
+            selector: '#context-menu-simple',
+            callback: function(key, options) {},
+            items: {
+                "edit": {
+                    name: "Edit",
+                },
+                "cut": {
+                    name: "Cut",
+                },
+                copy: {
+                    name: "Copy",
+                    icon: "copy"
+                },
+                "paste": {
+                    name: "Paste",
+                    icon: "paste"
+                },
+                "delete": {
+                    name: "Delete",
+                    icon: "delete"
+                },
+                "sep1": "---------",
+                "quit": {
+                    name: "Quit",
+                    icon: function() {
+                        return 'context-menu-icon context-menu-icon-quit';
+                    }
+                }
+            }
+        });
+    })(jQuery);
+</script>
 </body>
 </html>

@@ -1,18 +1,59 @@
-
-
-.contextmenu{
-    /* border-radius: 10px; */
-    background-color: orange;  
-    padding: 0; 
+.card-inverse-info {
+    background: rgba(61, 165, 244, 0.2);
+    border: 1px solid #3898e0;
+    color: #2e7db9
 }
-.contextmenu > a {
-    display: block;
-    background-color: lightgray;
-    padding: .5em 1em; 
-    text-decoration: none; 
-    color: black;
+
+/* ------------------------------------ */
+/*           the context menu           */
+/* ------------------------------------ */
+
+ul.context-menu-list {
+    box-shadow: none;
+    border: 1px solid #f3f3f3
 }
-.contextmenu > a:hover{
-    background-color: darkgray;
-    color: white;
+
+ul.context-menu-list {
+    position: absolute;
+    display: inline-block; 
+    padding: .25em 0;
+    margin: .3em;
+    font-family: inherit;
+    font-size: inherit;
+    list-style-type: none;
+    background: #fff;
+    border: 1px solid #bebebe;
+    border-radius: .2em;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+}
+
+/* ------------------------------------ */
+/*        each item of context menu      */
+/* ------------------------------------ */ 
+li.context-menu-item {
+    position: relative;
+    padding: .5em 1em;
+    color: #2f2f2f;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff
+}
+
+/* ------------------------------------ */
+/*                 hover               */
+/* ------------------------------------ */  
+ul.context-menu-list li.context-menu-item.context-menu-hover {
+    background-color: darkblue;
+    color: #fff
+}
+
+/* ------------------------------------ */
+/*             separator line           */
+/* ------------------------------------ */   
+.context-menu-separator {
+    padding: 0 !important; 
+    border-bottom: 1px solid #e6e6e6
 }
