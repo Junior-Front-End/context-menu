@@ -1,0 +1,18 @@
+
+
+.contextmenu{
+    /* border-radius: 10px; */
+    background-color: orange;  
+    padding: 0; 
+}
+.contextmenu > a {
+    display: block;
+    background-color: lightgray;
+    padding: .5em 1em; 
+    text-decoration: none; 
+    color: black;
+}
+.contextmenu > a:hover{
+    background-color: darkgray;
+    color: white;
+}
